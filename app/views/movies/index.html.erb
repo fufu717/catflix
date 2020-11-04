@@ -25,7 +25,12 @@
     <div class="container">
       <h1 class="display-3">CATFLIX</h1>
       <p>猫好きの、猫好きによる、猫好きのための動画アプリ</p>
+      <% if user_signed_in? %>
+        <%= link_to '動画投稿はこちら', "#", class:"btn btn-danger btn-lg" %> 
+      <% else %>
         <%= link_to '新規登録はこちら', new_user_registration_path, class:"btn btn-primary btn-lg" %> 
+        <%= link_to 'ログインはこちら', new_user_session_path, class:"btn btn-info btn-lg" %>
+      <% end %>
     </div>
   </div>
   <!--動画一覧-->
@@ -41,10 +46,6 @@
   </div> 
 
 </main>
-
-<footer class="container">
-  <p> 2020</p>
-</footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>
