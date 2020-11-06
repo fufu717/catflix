@@ -1,0 +1,11 @@
+<%= render "shared/header"%>
+<h1>猫登録</h1>
+  <%= form_with(model: @cat, local: true) do |f| %>
+  <!-- ファイルアップロード -->
+  <div class="form-group">
+    <label>ネコちゃんの画像</label>
+    <input type="file">
+  </div>
+  <%= f.collection_select(:cat_type_id, CatType.all, :id, :name,  {prompt: '---'}, {class:"select-box", id:"user-cat"}) %>
+  <button type="submit" class="btn btn-default">Submit</button>
+  <% end %>

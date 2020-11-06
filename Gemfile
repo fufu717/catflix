@@ -58,4 +58,10 @@ gem "jquery-ui-rails"
 
 gem 'devise'
 
+gem 'sqlite3', '1.3.13'
+
 gem 'active_hash'
+
+gem 'trix'
+
+gem 'carrierwave'

@@ -1,0 +1,6 @@
+<%= form_with model: @movie, local: true do |form| %>
+  <p>title</p><%= form.text_field :title %> <br>
+  <p>text</p><%= form.text_area :text %> <br>
+  <p>video</p><%= form.file_field :movie %> <br>
+  <%= form.submit %>
+<% end %>
