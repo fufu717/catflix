@@ -1,1 +1,56 @@
-<h1>ユーザーぺーじ</h1>
+<!doctype html>
+<html lang="ja" >
+  <head>
+    <title>CATFLIX</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="jumbotron.css" rel="stylesheet">
+    <link href="../example.css" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'relord' %>
+  </head>
+  <body >
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+  <div class="container">
+    <span class="skiplink-text">Skip to main content</span>
+  </div>
+</a>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<%= render "shared/header"%>
+
+  <!--動画一覧-->
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+<h1><%="#{@nickname}さんの投稿一覧" %></h1>
+<div class="movie">
+<table>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+    <p id="notice"><%= notice %></p>
+    <% if movie.movie.attached? %>
+    <div class="content">
+    <p><%= movie.created_at.to_s(:datetime) %></p>
+    <p><%= movie.cat.cat_type.name %></p>
+          <div class='title'>
+        <%= movie.title %>
+      </div>
+        <video src="<%= rails_blob_path(movie.movie) %>" type="video/mp4" controls></video>
+      <div class='text'>
+        <%= movie.text %>
+      </div>
+      <div class='user-name'>
+        <%= "#{movie.user.nickname}さんの#{movie.cat.name}ちゃん" %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+
+  </tbody>
+</table>
+
+  </div> 
+</div>
