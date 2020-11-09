@@ -26,7 +26,7 @@
       <h1 class="display-3">CATFLIX</h1>
       <p>猫好きの、猫好きによる、猫好きのための動画アプリ</p>
       <% if user_signed_in? %>
-        <%= link_to '動画投稿はこちら', "#", class:"btn btn-danger btn-lg" %> 
+        <%= link_to '動画投稿はこちら', new_movie_path, class:"btn btn-danger btn-lg" %> 
       <% else %>
         <%= link_to '新規登録はこちら', new_user_registration_path, class:"btn btn-primary btn-lg" %> 
         <%= link_to 'ログインはこちら', new_user_session_path, class:"btn btn-info btn-lg" %>
@@ -35,15 +35,7 @@
   </div>
   <!--動画一覧-->
   <div class="container">
-<<<<<<< Updated upstream
-    <div class="row">
-      <div class="col-md-4">
-        <h2>見出し</h2>
-        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
-        <p><a class="btn btn-secondary" href="#" role="button">詳しくみる &raquo;</a></p>
-=======
     <p id="notice"><%= notice %></p>
-
 <h1>新着動画</h1>
 <div class="movie">
 <table>
@@ -67,12 +59,17 @@
       </div>
       <div class='user-name'>
         <%= "#{movie.user.nickname}さんの#{movie.cat.name}ちゃん" %>
->>>>>>> Stashed changes
       </div>
     </div>
-    <hr>
-  </div> 
+    <% end %>
 
+    <% end %>
+
+  </tbody>
+</table>
+
+  </div> 
+</div>
 </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

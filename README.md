@@ -46,12 +46,4 @@
 -has_many :cats
 -has_many :comments
 
-## commentsテーブル
-| Column           | Type      | Options                        |
-| ---------------- | --------- | ------------------------------ |
-| text             | text      | null: false                    |
-| user_id          | reference | null: false, foreign_key: true |
-
-### Association
-
--has_one :movie
+* ...

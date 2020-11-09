@@ -32,7 +32,6 @@
     <% @movies.each do |movie| %>
     <p id="notice"><%= notice %></p>
 
-
     <% if movie.movie.attached? %>
     <div class="content">
     <p><%= movie.created_at.to_s(:datetime) %></p>
@@ -49,7 +48,6 @@
       </div>
     </div>
     <% end %>
-    <p>
 
     <% end %>
 

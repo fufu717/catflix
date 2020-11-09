@@ -1,3 +1,15 @@
+<!doctype html>
+<html lang="ja" >
+  <head>
+    <title>CATFLIX</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="jumbotron.css" rel="stylesheet">
+    <link href="../example.css" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'relord' %>
+  </head>
+
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'relord' %>
 <%= render "shared/header"%>
 <%= form_with model: @user, url:user_registration_path, class: 'registration-main', local: true do |f| %>
