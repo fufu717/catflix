@@ -9,12 +9,12 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
-  # GET /movies/new
   def new
     @movie = Movie.new
+    @user = current_user
   end
 
-  # GET /movies/1/edit
+
   def edit
   end
 
@@ -63,6 +63,7 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :text, :movie).merge(user_id: current_user.id)
+      params.require(:movie).permit(:title, :text, :cat_id, :movie).merge(user_id: current_user.id)
     end
+
 end

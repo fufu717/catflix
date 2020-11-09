@@ -65,3 +65,5 @@ gem 'active_hash'
 gem 'trix'
 
 gem 'carrierwave'
+
+gem 'pry-rails'

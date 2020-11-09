@@ -27,5 +27,6 @@ class CatType < ActiveHash::Base
     { id: 72, name: 'ヨーロピアンショートヘア' }, { id: 73, name: 'ジャーマンレックス' },
     { id: 78, name: 'ジャバニーズ' }, { id: 79, name: 'ミンスキン' }, { id: 80, name: 'ナポレオン' },
     { id: 81, name: 'オリエンタルバイカラー' }, { id: 82, name: 'ロシアンホワイト' }, { id: 83, name: 'ウクラニアン・レフコイ' },
+    { id: 84, name: 'Mix' }, { id: 85, name: 'その他' },
   ]
 end

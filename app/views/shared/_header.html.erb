@@ -19,8 +19,8 @@
         <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%="#{current_user.nickname}さん"%></a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a><%= link_to 'ネコちゃん登録', new_cat_path, method: :get, class: "dropdown-item" %></a>
-          <a><%= link_to 'ユーザー情報', "#", method: :get , class: "dropdown-item" %></a> 
-          <a><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "dropdown-item" %></a> 
+          <a><%= link_to 'マイページ', user_path(current_user.id), method: :get , class: "dropdown-item" %></a> 
+          <a><%= link_to 'ログアウト', destroy_user_session_path, method: :get, class: "dropdown-item" %></a>
         </div>
       </li>
     </ul>

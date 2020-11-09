@@ -4,6 +4,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.text :title,          null: false
       t.text :text,             null: false
       t.references :user,   foreign_key: true
+      t.references :cat,    fereign_key: true
       t.timestamps
     end
   end

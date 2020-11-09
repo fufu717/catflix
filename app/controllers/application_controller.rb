@@ -7,4 +7,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :email, :encrypted_password, :first_name, :last_name, :first_name_kana, :last_name_kana, :birth_day])
     devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :email, :encrypted_password, :first_name, :last_name, :first_name_kana, :last_name_kana, :birth_day])
   end
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
+  end
 end
