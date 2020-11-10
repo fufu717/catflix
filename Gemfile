@@ -58,7 +58,10 @@ gem "jquery-ui-rails"
 
 gem 'devise'
 
-gem 'sqlite3', '1.3.13'
+#gem 'sqlite3', '1.3.13'
+
+gem 'sqlite3', groups: %w(test development), require: false
+gem 'pg', groups: %w(production), require: false
 
 gem 'active_hash'
 
