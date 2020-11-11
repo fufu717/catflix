@@ -1,7 +1,7 @@
 class CatsController < ApplicationController
 
   def new
-    @cats = Cat.new
+    @cat = Cat.new
   end
 
   def create
