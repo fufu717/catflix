@@ -17,8 +17,9 @@
     </h1>
   </div>
   
-  <%= form_with scope: :cats, url: cats_path, local: true do |f| %>
+  <%= form_with model: @cat, url: cats_path, local: true do |f| %>
   <div class="form-group">
+ <%= render 'shared/error_messages', model: f.object %>
     <div class='form-text-wrap'>
       <label class="form-text">名前</label>
       <span class="indispensable">必須</span>

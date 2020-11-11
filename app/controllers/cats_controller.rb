@@ -15,6 +15,6 @@ class CatsController < ApplicationController
 
   private
   def cat_params
-    params.require(:cats).permit(:name, :cat_type_id, :birth_day,:image).merge(user_id: current_user.id)
+    params.require(:cat).permit(:name, :cat_type_id, :birth_day,:image).merge(user_id: current_user.id)
   end
 end
