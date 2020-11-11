@@ -43,4 +43,5 @@ password:a111111
 [![Image from Gyazo](https://i.gyazo.com/6d6ea9320a1f6c7e1d5ae5fc83ee71ca.png)](https://gyazo.com/6d6ea9320a1f6c7e1d5ae5fc83ee71ca)
 
 ## ローカルでの動作方法
-git clone 
+git clone https://github.com/fufu717/catflix.git  
+開発環境：Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code
