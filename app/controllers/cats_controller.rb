@@ -4,6 +4,11 @@ class CatsController < ApplicationController
     @cat = Cat.new
   end
 
+  def show
+    cat = Cat.find(params[:id])
+    @cat = Cat.find(params[:id])
+    @movies = cat.movies
+  end
   def create
     @cat = Cat.new(cat_params)
     if @cat.save

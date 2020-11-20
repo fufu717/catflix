@@ -14,7 +14,6 @@ class MoviesController < ApplicationController
     @user = current_user
   end
 
-
   def edit
   end
 
@@ -27,8 +26,6 @@ class MoviesController < ApplicationController
         render :new 
       end
   end
-
- 
 
   def destroy
     @movie.destroy
